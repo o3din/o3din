@@ -6,8 +6,8 @@ create_cli() {
     cat > "$HELPER_FILE" <<'EOFCLI'
 #!/bin/bash
 
-SERVICE="liora"
-WORK_DIR="/root/liora"
+SERVICE="o3din"
+WORK_DIR="/root/o3din"
 BUN_PATH="/root/.bun/bin/bun"
 REPO_URL="https://github.com/o3din/o3din.git"
 
@@ -56,7 +56,7 @@ EOF
     if [ "$CURRENT" = "$LATEST" ]; then
         echo "You are already on the latest version!"
         echo ""
-        printf "liora> Show all versions? [y/N]: "
+        printf "o3din> Show all versions? [y/N]: "
         read show_all
         [[ ! $show_all =~ ^[Yy]$ ]] && exit 0
     fi
@@ -68,7 +68,7 @@ EOF
     echo ""
     
     while true; do
-        printf "liora> "
+        printf "o3din> "
         read choice
         
         case $choice in
@@ -91,7 +91,7 @@ EOF
                 echo ""
                 
                 while true; do
-                    printf "liora> "
+                    printf "o3din> "
                     read ver_choice
                     
                     if [[ $ver_choice =~ ^[0-9]+$ ]] && [ $ver_choice -ge 1 ] && [ $ver_choice -le ${#VERSIONS[@]} ]; then
@@ -201,7 +201,7 @@ EOF
 
 +------------------------------------------+
 |                                          |
-|           LIORA BOT CLI                  |
+|           o3din BOT CLI                  |
 |                                          |
 +------------------------------------------+
 

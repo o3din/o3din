@@ -1,6 +1,6 @@
 # 🎨 Interactive Buttons & Rich Media Guide
 
-Complete guide for creating interactive buttons, carousels, and albums in Liora.
+Complete guide for creating interactive buttons, carousels, and albums in o3din.
 
 ---
 
@@ -15,7 +15,7 @@ Complete guide for creating interactive buttons, carousels, and albums in Liora.
 
 ## 🎯 Interactive Buttons
 
-Liora supports 15+ types of interactive buttons for rich user experiences.
+o3din supports 15+ types of interactive buttons for rich user experiences.
 
 ### 1. Quick Reply Button
 
@@ -735,4 +735,4 @@ await conn.client(m.chat, {
 ## 📞 Need Help?
 
 - **WhatsApp Group**: [Join Community](https://chat.whatsapp.com/FtMSX1EsGHTJeynu8QmjpG)
-- **GitHub Issues**: [Report Bug](https://github.com/naruyaizumi/liora/issues)
+- **GitHub Issues**: [Report Bug](https://github.com/naruyaizumi/o3din/issues)

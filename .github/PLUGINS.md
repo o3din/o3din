@@ -1,6 +1,6 @@
-# 🔌 Liora Plugin Development Guide
+# 🔌 o3din Plugin Development Guide
 
-Complete guide for creating and managing plugins in Liora bot framework.
+Complete guide for creating and managing plugins in o3din bot framework.
 
 ---
 
@@ -640,4 +640,4 @@ $ tail -f logs/bot.log
 ## 📞 Need Help?
 
 - **WhatsApp Group**: [Join Community](https://chat.whatsapp.com/FtMSX1EsGHTJeynu8QmjpG)
-- **GitHub Issues**: [Report Bug](https://github.com/naruyaizumi/liora/issues)
+- **GitHub Issues**: [Report Bug](https://github.com/naruyaizumi/o3din/issues)

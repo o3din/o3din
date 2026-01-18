@@ -124,7 +124,7 @@ END:VCARD`;
             },
             contextInfo: {
                 externalAdReply: {
-                    title: "© 2024–2026 Liora",
+                    title: "© 2024–2026 o3din",
                     body: "Contact via WhatsApp",
                     mediaType: 1,
                     thumbnailUrl: "https://files.catbox.moe/8tw69l.jpeg",

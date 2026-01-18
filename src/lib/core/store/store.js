@@ -14,13 +14,13 @@ import { MemoryStore, EVENT_PRIORITY } from "./core.js";
  * @constant {string}
  * @private
  */
-const REDIS_PREFIX = "liora:chat:";
-const REDIS_PRESENCE_PREFIX = "liora:presence:";
-const REDIS_MESSAGE_PREFIX = "liora:message:";
-const REDIS_CONTACT_PREFIX = "liora:contact:";
-const REDIS_GROUP_PREFIX = "liora:group:";
-const REDIS_CALL_PREFIX = "liora:call:";
-const REDIS_BLOCKLIST_PREFIX = "liora:blocklist:";
+const REDIS_PREFIX = "o3din:chat:";
+const REDIS_PRESENCE_PREFIX = "o3din:presence:";
+const REDIS_MESSAGE_PREFIX = "o3din:message:";
+const REDIS_CONTACT_PREFIX = "o3din:contact:";
+const REDIS_GROUP_PREFIX = "o3din:group:";
+const REDIS_CALL_PREFIX = "o3din:call:";
+const REDIS_BLOCKLIST_PREFIX = "o3din:blocklist:";
 
 /**
  * Singleton memory store instance

@@ -3,10 +3,10 @@
 set -euo pipefail
 
 GITHUB_RAW="https://raw.githubusercontent.com/o3din/o3din/main/src/lib/shell"
-SERVICE_NAME="liora"
-SERVICE_FILE="/etc/systemd/system/liora.service"
+SERVICE_NAME="o3din"
+SERVICE_FILE="/etc/systemd/system/o3din.service"
 HELPER_FILE="/usr/local/bin/bot"
-WORK_DIR="/root/liora"
+WORK_DIR="/root/o3din"
 BUN_PATH="/root/.bun/bin/bun"
 REPO_URL="https://github.com/o3din/o3din.git"
 TIME_ZONE="Asia/Jakarta"
@@ -51,7 +51,7 @@ print_banner() {
     cat << "EOF"
 +------------------------------------------+
 |                                          |
-|          LIORA BOT INSTALLER             |
+|          o3din BOT INSTALLER             |
 |                                          |
 +------------------------------------------+
 

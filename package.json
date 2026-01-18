@@ -1,7 +1,7 @@
 {
-    "name": "liora",
+    "name": "o3din",
     "version": "10.0.0",
-    "description": "Liora - Advanced WhatsApp Bot",
+    "description": "o3din - Advanced WhatsApp Bot",
     "type": "module",
     "license": "Apache-2.0",
     "author": {

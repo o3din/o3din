@@ -230,8 +230,8 @@ export async function addExif(webpBuffer, metadata = {}) {
 
     const img = new webp.Image();
     const exifData = {
-        "sticker-pack-id": metadata.packId || `liora-${Date.now()}`,
-        "sticker-pack-name": metadata.packName || "Liora",
+        "sticker-pack-id": metadata.packId || `o3din-${Date.now()}`,
+        "sticker-pack-name": metadata.packName || "o3din",
         "sticker-pack-publisher": metadata.packPublish || "© Naruya Izumi",
         "android-app-store-link":
             metadata.androidApp || "https://play.google.com/store/apps/details?id=com.whatsapp",

@@ -2,7 +2,7 @@
  * @file Plugin manager and connection lifecycle handler
  * @module core/connection
  * @description Plugin system manager, event handling, and connection lifecycle
- * management for Liora bot with automatic reconnection and hot-reload capabilities.
+ * management for o3din bot with automatic reconnection and hot-reload capabilities.
  * @license Apache-2.0
  * @author Naruya Izumi
  */

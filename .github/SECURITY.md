@@ -18,7 +18,7 @@ We provide security updates for the following versions. Always use the latest st
 
 ### Preferred Reporting Method
 
-**Email**: [liora.bot.official@gmail.com](mailto:liora.bot.official@gmail.com?subject=Security%20Vulnerability%20Report)
+**Email**: [o3din.bot.official@gmail.com](mailto:o3din.bot.official@gmail.com?subject=Security%20Vulnerability%20Report)
 
 ### Required Information
 
@@ -41,7 +41,7 @@ When reporting a vulnerability, please include:
 4. **Environment Details**
     - Operating system and version
     - Bun version
-    - Liora version
+    - o3din version
     - Relevant configuration details
 
 5. **Proof of Concept**
@@ -331,7 +331,7 @@ _No vulnerabilities reported yet_
 
 ## Contact
 
-**Security Team**: liora.bot.official@gmail.com  
+**Security Team**: o3din.bot.official@gmail.com  
 **PGP Key**: Available upon request  
 **Response Time**: 24-48 hours for initial acknowledgment
 

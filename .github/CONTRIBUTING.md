@@ -1,6 +1,6 @@
-# Contributing to Liora
+# Contributing to o3din
 
-Thank you for considering contributing to Liora. This document provides guidelines and instructions for contributing to the project.
+Thank you for considering contributing to o3din. This document provides guidelines and instructions for contributing to the project.
 
 ---
 
@@ -40,7 +40,7 @@ This project adheres to the [GitHub Community Code of Conduct](https://docs.gith
 
 ### Reporting
 
-Report violations to: liora.bot.official@gmail.com
+Report violations to: o3din.bot.official@gmail.com
 
 All reports will be reviewed promptly and confidentially.
 
@@ -63,14 +63,14 @@ All reports will be reviewed promptly and confidentially.
 2. **Clone your fork**:
 
     ```bash
-    git clone https://github.com/YOUR-USERNAME/liora.git
-    cd liora
+    git clone https://github.com/YOUR-USERNAME/o3din.git
+    cd o3din
     ```
 
 3. **Add upstream remote**:
 
     ```bash
-    git remote add upstream https://github.com/naruyaizumi/liora.git
+    git remote add upstream https://github.com/naruyaizumi/o3din.git
     ```
 
 4. **Verify remotes**:
@@ -115,7 +115,7 @@ bun run dev
 ### Project Structure
 
 ```
-liora/
+o3din/
 ├── src/
 │   ├── main.js          # Application entry point
 │   ├── handlers.js         # Message and event handlers
@@ -153,7 +153,7 @@ Clear description of the bug
 
 - OS: [e.g., Ubuntu 24.04]
 - Bun version: [e.g., 1.3.5]
-- Liora version: [e.g., 10.0.0]
+- o3din version: [e.g., 10.0.0]
 
 **Additional Context**
 Logs, screenshots, or other relevant information
@@ -501,18 +501,18 @@ Contributors are recognized through:
 ## Questions?
 
 - **GitHub Issues**: Report bugs with `question` label
-- **Email**: liora.bot.official@gmail.com
+- **Email**: o3din.bot.official@gmail.com
 
 ---
 
 ## License
 
-By contributing to Liora, you agree that your contributions will be licensed under the Apache License 2.0.
+By contributing to o3din, you agree that your contributions will be licensed under the Apache License 2.0.
 
-You retain copyright to your contributions but grant Liora and users the rights specified in the Apache License 2.0.
+You retain copyright to your contributions but grant o3din and users the rights specified in the Apache License 2.0.
 
 ---
 
-**Thank you for contributing to Liora!**
+**Thank you for contributing to o3din!**
 
-Made with dedication by the Liora community.
+Made with dedication by the o3din community.

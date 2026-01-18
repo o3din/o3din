@@ -137,7 +137,7 @@ async function main(conn, m, pkg, prefix, cmd, time) {
 
     const cap = [
         "```",
-        `[${time}] Liora`,
+        `[${time}] o3din`,
         "─".repeat(25),
         `Name    : ${pkg.name}`,
         `Version : ${pkg.version}`,
@@ -183,7 +183,7 @@ async function main(conn, m, pkg, prefix, cmd, time) {
             product: {
                 productImage: { url: "https://files.catbox.moe/1moinz.jpg" },
                 productId: "25015941284694382",
-                title: "Liora Menu",
+                title: "o3din Menu",
                 description: "WhatsApp Bot",
                 currencyCode: "USD",
                 priceAmount1000: 1000000000000000,
@@ -193,7 +193,7 @@ async function main(conn, m, pkg, prefix, cmd, time) {
             },
             businessOwnerJid: "113748182302861@lid",
             caption: "*© Naruya Izumi 2024 - 2026*",
-            title: "Liora Menu",
+            title: "o3din Menu",
             footer: cap,
             interactiveButtons: [
                 {

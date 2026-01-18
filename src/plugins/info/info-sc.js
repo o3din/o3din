@@ -28,7 +28,7 @@
 
 let handler = async (m, { conn }) => {
     const txt = `
-Liora Repository
+o3din Repository
 
 Project Script Izumi
 Repository: https://github.com/o3din/o3din/

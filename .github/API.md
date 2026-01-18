@@ -1,6 +1,6 @@
 # 🌐 API Utilities & Helpers Guide
 
-Complete guide for using API utilities, helpers, and external integrations in Liora.
+Complete guide for using API utilities, helpers, and external integrations in o3din.
 
 ---
 
@@ -15,7 +15,7 @@ Complete guide for using API utilities, helpers, and external integrations in Li
 
 ## 🔄 API Fallback System
 
-Liora uses a robust fallback system that tries multiple API endpoints until one succeeds.
+o3din uses a robust fallback system that tries multiple API endpoints until one succeeds.
 
 ### How Fallback Works
 
@@ -374,7 +374,7 @@ export async function customAPI(query) {
         try {
             const response = await fetch(url, {
                 headers: {
-                    "User-Agent": "Liora-Bot/1.0",
+                    "User-Agent": "o3din-Bot/1.0",
                 },
             });
 
@@ -747,4 +747,4 @@ export class APIClient {
 ## 📞 Need Help?
 
 - **WhatsApp Group**: [Join Community](https://chat.whatsapp.com/FtMSX1EsGHTJeynu8QmjpG)
-- **GitHub Issues**: [Report Bug](https://github.com/naruyaizumi/liora/issues)
+- **GitHub Issues**: [Report Bug](https://github.com/naruyaizumi/o3din/issues)

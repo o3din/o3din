@@ -1,11 +1,11 @@
 <div align="center">
 
 <!-- Wave Header with Typing Animation -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Liora%20Bot&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=fff&desc=Enterprise-Grade%20WhatsApp%20Bot%20Framework&descAlignY=55&descSize=18" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=o3din%20Bot&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=fff&desc=Enterprise-Grade%20WhatsApp%20Bot%20Framework&descAlignY=55&descSize=18" width="100%" />
 
-![Liora Banner](https://files.catbox.moe/3xv7p0.png)
+![o3din Banner](https://files.catbox.moe/3xv7p0.png)
 
-_🌸 Liora_
+_🌸 o3din_
 
 **Modern WhatsApp Bot Framework built on Baileys**
 
@@ -36,7 +36,7 @@ Built on Baileys • Powered by Bun Runtime • Written in JavaScript
 
 _🚀 Overview_
 
-Liora is an enterprise-ready WhatsApp bot framework designed for developers who demand **performance**, **reliability**, and **scalability**. Built with modern technologies and battle-tested architecture patterns.
+o3din is an enterprise-ready WhatsApp bot framework designed for developers who demand **performance**, **reliability**, and **scalability**. Built with modern technologies and battle-tested architecture patterns.
 
 **🏗️ Architecture Overview**
 
@@ -238,7 +238,7 @@ PAIRING_NUMBER=1234567890
 PAIRING_CODE=CUMICUMI
 
 # Bot Metadata
-WATERMARK=Liora
+WATERMARK=o3din
 AUTHOR=Naruya Izumi
 THUMBNAIL_URL=https://
 
@@ -269,7 +269,7 @@ _🎮 Usage_
 
 **Command Prefixes**
 
-Liora supports multiple prefixes:
+o3din supports multiple prefixes:
 
 ```
 .menu    # Dot prefix
@@ -385,12 +385,12 @@ pm2 monit
 
 **Using Systemd**
 
-Service file auto-created by installer at `/etc/systemd/system/liora.service`
+Service file auto-created by installer at `/etc/systemd/system/o3din.service`
 
 ```bash
-sudo systemctl start liora
-sudo systemctl enable liora
-sudo systemctl status liora
+sudo systemctl start o3din
+sudo systemctl enable o3din
+sudo systemctl status o3din
 ```
 
 <!-- Wave Footer Divider -->
@@ -465,7 +465,7 @@ on Discord
 
 _🔒 Security_
 
-**Report vulnerabilities to:** liora.bot.official@gmail.com
+**Report vulnerabilities to:** o3din.bot.official@gmail.com
 
 > [!WARNING]
 > **DO NOT** report security issues through public GitHub issues.
@@ -547,7 +547,7 @@ _💖 Acknowledgments_
 
   <hr/>
 
-  <p><strong>Maintained by the Liora community || <a href="https://github.com/naruyaizumi">© 2024 - 2026 Naruya Izumi</a></strong></p>
+  <p><strong>Maintained by the o3din community || <a href="https://github.com/naruyaizumi">© 2024 - 2026 Naruya Izumi</a></strong></p>
   
 <br/><br/>
 

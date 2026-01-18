@@ -1,7 +1,7 @@
 /**
- * @file Liora bot core entry point and lifecycle manager
+ * @file o3din bot core entry point and lifecycle manager
  * @module main
- * @description Main initialization file for Liora WhatsApp bot - handles
+ * @description Main initialization file for o3din WhatsApp bot - handles
  * authentication, connection management, plugin loading, and graceful shutdown.
  * @license Apache-2.0
  * @author Naruya Izumi
@@ -192,7 +192,7 @@ async function pair(conn) {
 /**
  * Main bot initialization function
  * @async
- * @function LIORA
+ * @function o3din
  * @returns {Promise<void>}
  *
  * @initializationSteps
@@ -205,7 +205,7 @@ async function pair(conn) {
  * 7. Load and register plugins
  * 8. Start message handler
  */
-async function LIORA() {
+async function o3din() {
     // Initialize authentication
     auth = useSQLiteAuthState();
     const { state, saveCreds } = auth;
@@ -405,11 +405,11 @@ process.on("unhandledRejection", async (e) => {
  * Main execution entry point
  * @async
  * @execution
- * - Calls LIORA() to initialize bot
+ * - Calls o3din() to initialize bot
  * - Handles fatal errors with shutdown
  * - Exits with appropriate code
  */
-LIORA().catch(async (e) => {
+o3din().catch(async (e) => {
     global.logger.fatal({ error: e.message, stack: e.stack }, "Fatal");
     await shutdown("fatal");
     process.exit(1);

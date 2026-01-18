@@ -1,5 +1,5 @@
 /**
- * @file Socket wrapper and connection management for Liora bot
+ * @file Socket wrapper and connection management for o3din bot
  * @module core/socket
  * @description Enhanced WhatsApp WebSocket wrapper with message queueing,
  * connection utilities, and message processing pipeline.

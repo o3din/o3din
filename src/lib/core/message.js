@@ -2,7 +2,7 @@
  * @file Message serialization and prototype extension
  * @module core/message
  * @description Extends WhatsApp WebMessageInfo prototype with utility methods
- * and properties for enhanced message handling in Liora bot.
+ * and properties for enhanced message handling in o3din bot.
  * @license Apache-2.0
  * @author Naruya Izumi
  */
@@ -233,7 +233,7 @@ const createQuotedMessage = (self, ctx, quoted, rawNode, type) => {
 };
 
 /**
- * Extends WebMessageInfo prototype with Liora-specific utilities
+ * Extends WebMessageInfo prototype with o3din-specific utilities
  * @export
  * @function serialize
  * @returns {Object} Modified prototype

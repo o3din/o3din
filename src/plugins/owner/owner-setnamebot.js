@@ -28,7 +28,7 @@
  */
 
 let handler = async (m, { conn, text, command, usedPrefix }) => {
-    if (!text) return m.reply(`Set bot name\nEx: ${usedPrefix + command} Liora`);
+    if (!text) return m.reply(`Set bot name\nEx: ${usedPrefix + command} o3din`);
 
     await conn.updateProfileName(text);
     m.reply(`Name updated: ${text}`);

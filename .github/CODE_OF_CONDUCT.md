@@ -113,7 +113,7 @@ This Code of Conduct applies in all project spaces, including:
 If you experience or witness unacceptable behavior:
 
 **Primary Contact**  
-Email: liora.bot.official@gmail.com  
+Email: o3din.bot.official@gmail.com  
 Subject: "Code of Conduct Violation Report"
 
 **What to Include**
@@ -205,7 +205,7 @@ Demonstrating pattern of violations, harassment, or aggression toward individual
 
 If you believe an enforcement action was incorrect:
 
-1. **Email appeal** to liora.bot.official@gmail.com
+1. **Email appeal** to o3din.bot.official@gmail.com
 2. **Subject**: "Code of Conduct Enforcement Appeal"
 3. **Include**: Original incident details and reason for appeal
 4. **Provide**: Any additional context or evidence
@@ -276,8 +276,8 @@ Changes take effect immediately upon posting.
 
 **Project Maintainer**: Naruya Izumi  
 **GitHub**: [@naruyaizumi](https://github.com/naruyaizumi)  
-**Email**: liora.bot.official@gmail.com  
-**Repository**: https://github.com/naruyaizumi/liora
+**Email**: o3din.bot.official@gmail.com  
+**Repository**: https://github.com/naruyaizumi/o3din
 
 ---
 

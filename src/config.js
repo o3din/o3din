@@ -2,7 +2,7 @@
  * @file Configuration and database initialization module
  * @module config
  * @description Core configuration manager, database setup, and utility functions
- * for Liora bot with SQLite persistence and environment-based configuration.
+ * for o3din bot with SQLite persistence and environment-based configuration.
  * @license Apache-2.0
  * @author Naruya Izumi
  */
@@ -463,9 +463,9 @@ const initializeConfig = () => {
         owner: owners,
         pairingNumber: (Bun.env.PAIRING_NUMBER || "").trim(),
         pairingCode: (Bun.env.PAIRING_CODE || "").trim().toUpperCase() || generatePairingCode(),
-        watermark: Bun.env.WATERMARK || "Liora",
+        watermark: Bun.env.WATERMARK || "o3din",
         author: Bun.env.AUTHOR || "Naruya Izumi",
-        stickpack: Bun.env.STICKPACK || "Liora",
+        stickpack: Bun.env.STICKPACK || "o3din",
         stickauth: Bun.env.STICKAUTH || "© Naruya Izumi",
         thumbnailUrl: sanitizeUrl(Bun.env.THUMBNAIL_URL),
     };

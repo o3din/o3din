@@ -1,5 +1,5 @@
 /**
- * @file Signal handler and database utilities for Liora bot
+ * @file Signal handler and database utilities for o3din bot
  * @module core/utils
  * @description Provides signal/process management, database configuration,
  * and validation utilities for graceful shutdown and resource management.

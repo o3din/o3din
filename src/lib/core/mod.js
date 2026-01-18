@@ -1,5 +1,5 @@
 /**
- * @file Advanced message sending utilities for Liora bot
+ * @file Advanced message sending utilities for o3din bot
  * @module core/mods
  * @description Enhanced message sending capabilities including albums, cards,
  * interactive buttons, and rich media support beyond standard WhatsApp messages.

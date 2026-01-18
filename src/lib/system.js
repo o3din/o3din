@@ -952,7 +952,7 @@ export function getHeapInfo() {
 }
 
 /**
- * Retrieves service information for Liora bot
+ * Retrieves service information for o3din bot
  * @async
  * @function getServiceInfo
  * @returns {Promise<Object>} Service status information
@@ -963,12 +963,12 @@ export function getHeapInfo() {
  * - none: No service manager detected
  */
 export async function getServiceInfo() {
-    const serviceName = "liora";
+    const serviceName = "o3din";
 
-    const systemdStatus = await safeExec("systemctl is-active liora 2>/dev/null", "inactive");
+    const systemdStatus = await safeExec("systemctl is-active o3din 2>/dev/null", "inactive");
 
     if (systemdStatus.trim() === "active") {
-        const info = await safeExec("systemctl status liora --no-pager 2>/dev/null", "");
+        const info = await safeExec("systemctl status o3din --no-pager 2>/dev/null", "");
         if (!info) {
             return {
                 name: serviceName,
@@ -1007,31 +1007,31 @@ export async function getServiceInfo() {
     }
 
     // Check for PM2
-    const pm2List = await safeExec("pm2 list 2>/dev/null | grep liora", "");
+    const pm2List = await safeExec("pm2 list 2>/dev/null | grep o3din", "");
     if (pm2List.trim()) {
         const pm2Info = await safeExec("pm2 jlist 2>/dev/null", "[]");
         try {
             const processes = JSON.parse(pm2Info);
-            const lioraProcess = processes.find(
-                (p) => p.name === "liora" || p.name.includes("liora")
+            const o3dinProcess = processes.find(
+                (p) => p.name === "o3din" || p.name.includes("o3din")
             );
 
-            if (lioraProcess) {
-                const uptime = lioraProcess.pm2_env?.pm_uptime
-                    ? Date.now() - lioraProcess.pm2_env.pm_uptime
+            if (o3dinProcess) {
+                const uptime = o3dinProcess.pm2_env?.pm_uptime
+                    ? Date.now() - o3dinProcess.pm2_env.pm_uptime
                     : 0;
                 return {
                     name: serviceName,
                     type: "pm2",
                     description: "Running under PM2",
-                    status: lioraProcess.pm2_env?.status || "unknown",
+                    status: o3dinProcess.pm2_env?.status || "unknown",
                     active: `up ${formatTime(uptime / 1000)}`,
-                    memory: lioraProcess.monit?.memory
-                        ? formatSize(lioraProcess.monit.memory)
+                    memory: o3dinProcess.monit?.memory
+                        ? formatSize(o3dinProcess.monit.memory)
                         : "N/A",
-                    cpu: lioraProcess.monit?.cpu ? `${lioraProcess.monit.cpu}%` : "N/A",
+                    cpu: o3dinProcess.monit?.cpu ? `${o3dinProcess.monit.cpu}%` : "N/A",
                     tasks: "N/A",
-                    mainPid: lioraProcess.pid || "N/A",
+                    mainPid: o3dinProcess.pid || "N/A",
                 };
             }
         } catch {

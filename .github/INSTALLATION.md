@@ -1,6 +1,6 @@
-# 📦 Liora Installation Guide
+# 📦 o3din Installation Guide
 
-Complete installation guide for setting up Liora WhatsApp bot on various platforms.
+Complete installation guide for setting up o3din WhatsApp bot on various platforms.
 
 ---
 
@@ -54,7 +54,7 @@ Network  : Stable internet connection
 The automated installer handles everything for you:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/naruyaizumi/liora/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/naruyaizumi/o3din/main/install.sh | bash
 ```
 
 **What it does:**
@@ -206,13 +206,13 @@ bun --version
 
 ```bash
 # Using HTTPS
-git clone https://github.com/naruyaizumi/liora.git
+git clone https://github.com/naruyaizumi/o3din.git
 
 # Or using SSH
-git clone git@github.com:naruyaizumi/liora.git
+git clone git@github.com:naruyaizumi/o3din.git
 
 # Navigate to directory
-cd liora
+cd o3din
 ```
 
 ### Step 3: Install Dependencies
@@ -257,7 +257,7 @@ PAIRING_NUMBER=628123456789
 PAIRING_CODE=
 
 # Bot Metadata
-WATERMARK=Liora
+WATERMARK=o3din
 AUTHOR=Your Name
 THUMBNAIL_URL=https://your-image-url.com/image.jpg
 
@@ -310,10 +310,10 @@ npm install -g pm2
 cat > ecosystem.config.js << 'EOF'
 module.exports = {
   apps: [{
-    name: 'liora',
+    name: 'o3din',
     script: 'bun',
     args: 'run --smol src/main.js',
-    cwd: '/path/to/liora',
+    cwd: '/path/to/o3din',
     instances: 1,
     autorestart: true,
     watch: false,
@@ -335,7 +335,7 @@ pm2 save
 pm2 startup
 
 # Monitor logs
-pm2 logs liora
+pm2 logs o3din
 
 # Check status
 pm2 status
@@ -345,18 +345,18 @@ pm2 status
 
 ```bash
 # Create service file
-sudo nano /etc/systemd/system/liora.service
+sudo nano /etc/systemd/system/o3din.service
 ```
 
 ```ini
 [Unit]
-Description=Liora WhatsApp Bot
+Description=o3din WhatsApp Bot
 After=network.target
 
 [Service]
 Type=simple
 User=youruser
-WorkingDirectory=/path/to/liora
+WorkingDirectory=/path/to/o3din
 ExecStart=/home/youruser/.bun/bin/bun run --smol src/main.js
 Restart=always
 RestartSec=10
@@ -372,16 +372,16 @@ WantedBy=multi-user.target
 sudo systemctl daemon-reload
 
 # Enable service
-sudo systemctl enable liora
+sudo systemctl enable o3din
 
 # Start service
-sudo systemctl start liora
+sudo systemctl start o3din
 
 # Check status
-sudo systemctl status liora
+sudo systemctl status o3din
 
 # View logs
-sudo journalctl -u liora -f
+sudo journalctl -u o3din -f
 ```
 
 ### Docker Deployment
@@ -405,9 +405,9 @@ CMD ["bun", "run", "--smol", "src/main.js"]
 version: "3.8"
 
 services:
-    liora:
+    o3din:
         build: .
-        container_name: liora-bot
+        container_name: o3din-bot
         restart: unless-stopped
         volumes:
             - ./src/database:/app/src/database
@@ -421,7 +421,7 @@ services:
 docker-compose up -d
 
 # View logs
-docker-compose logs -f liora
+docker-compose logs -f o3din
 
 # Stop
 docker-compose down
@@ -446,7 +446,7 @@ docker-compose down
             }
         },
         "startup": {
-            "done": "Liora ready"
+            "done": "o3din ready"
         }
     }
 }
@@ -455,7 +455,7 @@ docker-compose down
 **Installation Steps:**
 
 1. Create new server with Bun egg
-2. Upload Liora files via SFTP
+2. Upload o3din files via SFTP
 3. Configure environment variables in panel
 4. Start server
 5. Check console for pairing code
@@ -586,7 +586,7 @@ chmod +x install.sh
 chmod -R 755 src/
 
 # If using systemd
-sudo chown -R $USER:$USER /path/to/liora
+sudo chown -R $USER:$USER /path/to/o3din
 ```
 
 #### Issue: "Port already in use"
@@ -637,13 +637,13 @@ LOG_LEVEL=debug
 BAILEYS_LOG_LEVEL=debug
 
 # View real-time logs
-tail -f logs/liora.log  # If using file logging
+tail -f logs/o3din.log  # If using file logging
 
 # PM2 logs
-pm2 logs liora --lines 100
+pm2 logs o3din --lines 100
 
 # Systemd logs
-sudo journalctl -u liora -f --since "10 minutes ago"
+sudo journalctl -u o3din -f --since "10 minutes ago"
 ```
 
 ### Performance Optimization
@@ -661,4 +661,4 @@ htop  # or top
 ## 📞 Need Help?
 
 - **WhatsApp Group**: [Join Community](https://chat.whatsapp.com/FtMSX1EsGHTJeynu8QmjpG)
-- **GitHub Issues**: [Report Bug](https://github.com/naruyaizumi/liora/issues)
+- **GitHub Issues**: [Report Bug](https://github.com/naruyaizumi/o3din/issues)
