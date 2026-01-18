@@ -10,7 +10,7 @@
 /* global conn */
 import { readdir, stat } from "node:fs/promises";
 import { join, relative, normalize } from "node:path";
-import { o3din } from "./socket.js";
+import { createSocket } from "./socket.js";
 
 /**
  * Recursively discovers all plugin files in a directory
@@ -236,9 +236,9 @@ export class EventManager {
      * @returns {void}
      */
     registerHandlers(conn, handler, saveCreds, cleanupManager) {
-        const messageHandler = handler?.handler?.bind(global.conn) || (() => {});
+        const messageHandler = handler?.handler?.bind(global.conn) || (() => { });
         const connectionHandler = handleDisconnect.bind(global.conn);
-        const credsHandler = saveCreds?.bind(global.conn) || (() => {});
+        const credsHandler = saveCreds?.bind(global.conn) || (() => { });
 
         conn.handler = messageHandler;
         conn.connectionUpdate = connectionHandler;
@@ -369,7 +369,7 @@ export class EventManager {
                 }
 
                 // Create new connection
-                global.conn = o3din(connectionOptions);
+                global.conn = createSocket(connectionOptions);
                 eventManager.isInit = true;
             }
 

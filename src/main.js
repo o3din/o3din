@@ -21,7 +21,7 @@ import {
     reloadAllPlugins,
     reloadSinglePlugin,
 } from "#core/connection.js";
-import { o3din } from "#core/socket.js";
+import { createSocket } from "#core/socket.js";
 
 /**
  * Pairing configuration from global config
@@ -205,7 +205,7 @@ async function pair(conn) {
  * 7. Load and register plugins
  * 8. Start message handler
  */
-async function o3din() {
+async function startBot() {
     // Initialize authentication
     auth = useSQLiteAuthState();
     const { state, saveCreds } = auth;
@@ -227,7 +227,7 @@ async function o3din() {
     };
 
     // Create global connection instance
-    global.conn = o3din(opt);
+    global.conn = createSocket(opt);
     global.conn.isInit = false;
 
     // Handle pairing for new sessions
@@ -405,11 +405,11 @@ process.on("unhandledRejection", async (e) => {
  * Main execution entry point
  * @async
  * @execution
- * - Calls o3din() to initialize bot
+ * - Calls startBot() to initialize bot
  * - Handles fatal errors with shutdown
  * - Exits with appropriate code
  */
-o3din().catch(async (e) => {
+startBot().catch(async (e) => {
     global.logger.fatal({ error: e.message, stack: e.stack }, "Fatal");
     await shutdown("fatal");
     process.exit(1);

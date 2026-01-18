@@ -49,8 +49,8 @@ const decodeJid = (raw) => {
     return cleaned.includes("@")
         ? cleaned
         : /^[0-9]+$/.test(cleaned)
-          ? cleaned + "@s.whatsapp.net"
-          : cleaned;
+            ? cleaned + "@s.whatsapp.net"
+            : cleaned;
 };
 
 /**
@@ -109,7 +109,7 @@ const messageQueue = new MessageQueue();
 /**
  * Creates enhanced WhatsApp socket connection
  * @export
- * @function o3din
+ * @function createSocket
  * @param {Object} connectionOptions - Baileys socket options
  * @returns {Object} Enhanced connection object
  *
@@ -127,7 +127,7 @@ const messageQueue = new MessageQueue();
  * - Efficient media streaming with chunk aggregation
  * - Automatic connection state management
  */
-export function o3din(connectionOptions) {
+export function createSocket(connectionOptions) {
     const conn = makeWASocket(connectionOptions);
 
     // Bind store management
@@ -222,7 +222,7 @@ export function o3din(connectionOptions) {
                         ...(chat || { id: jid }),
                         subject: md.subject,
                         metadata: md,
-                    }).catch(() => {});
+                    }).catch(() => { });
                     return md.subject;
                 }
             } catch {
@@ -388,8 +388,8 @@ export function o3din(connectionOptions) {
 
                     const chat = conn.decodeJid(
                         message.key?.remoteJid ||
-                            msgObj?.senderKeyDistributionMessage?.groupId ||
-                            ""
+                        msgObj?.senderKeyDistributionMessage?.groupId ||
+                        ""
                     );
 
                     if (!chat || isStatusJid(chat)) return;
@@ -441,8 +441,8 @@ export function o3din(connectionOptions) {
                                         message: ctx.quotedMessage,
                                         ...(qChat.endsWith("@g.us")
                                             ? {
-                                                  participant: conn.decodeJid(ctx.participant),
-                                              }
+                                                participant: conn.decodeJid(ctx.participant),
+                                            }
                                             : {}),
                                     };
 
@@ -470,9 +470,9 @@ export function o3din(connectionOptions) {
                     } else {
                         const s = conn.decodeJid(
                             (message.key?.fromMe && conn.user?.lid) ||
-                                message.participant ||
-                                message.key?.participant ||
-                                chat
+                            message.participant ||
+                            message.key?.participant ||
+                            chat
                         );
 
                         if (s && s !== chat) {
@@ -490,14 +490,14 @@ export function o3din(connectionOptions) {
                     if (mtype !== "senderKeyDistributionMessage") {
                         const s = isGroup
                             ? conn.decodeJid(
-                                  (message.key?.fromMe && conn.user?.lid) ||
-                                      message.participant ||
-                                      message.key?.participant ||
-                                      chat
-                              )
+                                (message.key?.fromMe && conn.user?.lid) ||
+                                message.participant ||
+                                message.key?.participant ||
+                                chat
+                            )
                             : message.key?.fromMe && conn.user?.lid
-                              ? conn.user.lid
-                              : chat;
+                                ? conn.user.lid
+                                : chat;
 
                         const fromMe =
                             message.key?.fromMe ||
