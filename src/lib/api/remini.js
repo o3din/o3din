@@ -2,7 +2,7 @@
  * @file Image enhancement and upscaling module
  * @module lib/remini
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { uploader } from "#lib/uploader.js";

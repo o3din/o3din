@@ -2,7 +2,7 @@
  * @file YouTube to MP4 downloader command handler
  * @module plugins/downloader/ytmp4
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

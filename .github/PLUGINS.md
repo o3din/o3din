@@ -640,4 +640,4 @@ $ tail -f logs/bot.log
 ## 📞 Need Help?
 
 - **WhatsApp Group**: [Join Community](https://chat.whatsapp.com/FtMSX1EsGHTJeynu8QmjpG)
-- **GitHub Issues**: [Report Bug](https://github.com/naruyaizumi/o3din/issues)
+- **GitHub Issues**: [Report Bug](https://github.com/o3din/o3din/issues)

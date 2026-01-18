@@ -3,7 +3,7 @@
  * content analysis, and performance metrics.
  * @module fetch
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  * @description Comprehensive URL fetcher with support for multiple protocols,
  * automatic content type detection, proxy rotation, caching, and detailed
  * metadata extraction.

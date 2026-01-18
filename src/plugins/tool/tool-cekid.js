@@ -2,7 +2,7 @@
  * @file WhatsApp ID extractor command handler
  * @module plugins/tools/cekid
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

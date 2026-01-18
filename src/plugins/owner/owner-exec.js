@@ -2,7 +2,7 @@
  * @file Terminal command handler
  * @module plugins/owner/terminal
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

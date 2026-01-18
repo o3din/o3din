@@ -4,7 +4,7 @@
  * @description Direct Spotify URL downloader for extracting audio from
  * Spotify track, playlist, or album links with multiple endpoint fallback.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

@@ -4,7 +4,7 @@
  * @description Extends WhatsApp WebMessageInfo prototype with utility methods
  * and properties for enhanced message handling in o3din bot.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { smsg } from "./smsg.js";

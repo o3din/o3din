@@ -2,7 +2,7 @@
  * @file Sticker meme generator command handler
  * @module plugins/maker/smeme
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { sticker } from "#lib/sticker.js";

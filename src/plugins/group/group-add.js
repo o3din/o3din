@@ -2,7 +2,7 @@
  * @file Add member to group command handler
  * @module plugins/group/add
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

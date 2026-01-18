@@ -2,7 +2,7 @@
  * @file Group information command handler
  * @module plugins/group/infogroup
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

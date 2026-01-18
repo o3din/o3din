@@ -2,7 +2,7 @@
  * @file Get LID (Local ID) command handler
  * @module plugins/tools/getlid
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

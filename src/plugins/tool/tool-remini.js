@@ -2,7 +2,7 @@
  * @file Image enhancement (HD/Remini) command handler
  * @module plugins/tools/remini
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { remini } from "#api/remini.js";

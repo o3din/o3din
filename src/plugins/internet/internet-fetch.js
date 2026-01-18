@@ -2,7 +2,7 @@
  * @file URL fetcher and content analyzer
  * @module plugins/internet/fetch
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { fwa, fb, cc, gcs } from "#lib/fetch.js";

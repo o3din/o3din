@@ -4,7 +4,7 @@
  * @description High-performance memory store with event queuing, TTL management,
  * and LRU/LFU eviction strategies for WhatsApp data synchronization.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { Database } from "bun:sqlite";

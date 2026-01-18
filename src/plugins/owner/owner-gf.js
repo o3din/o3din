@@ -2,7 +2,7 @@
  * @file Get file command handler
  * @module plugins/owner/getfile
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

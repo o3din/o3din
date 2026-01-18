@@ -4,7 +4,7 @@
  * @description Main command handler for o3din bot - processes incoming messages,
  * validates permissions, executes plugins, and manages command routing.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { smsg } from "#core/smsg.js";

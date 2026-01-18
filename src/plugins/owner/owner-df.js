@@ -2,7 +2,7 @@
  * @file Delete file command handler
  * @module plugins/owner/deletefile
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

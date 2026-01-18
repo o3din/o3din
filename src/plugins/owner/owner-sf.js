@@ -2,7 +2,7 @@
  * @file Save file and directory listing command handler
  * @module plugins/owner/savefile
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

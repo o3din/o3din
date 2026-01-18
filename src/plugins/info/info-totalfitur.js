@@ -2,7 +2,7 @@
  * @file Total features statistics command handler
  * @module plugins/info/totalfitur
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

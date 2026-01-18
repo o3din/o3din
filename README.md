@@ -239,7 +239,7 @@ PAIRING_CODE=CUMICUMI
 
 # Bot Metadata
 WATERMARK=o3din
-AUTHOR=Naruya Izumi
+AUTHOR=o3din
 THUMBNAIL_URL=https://
 
 # Logger Configuration
@@ -321,7 +321,7 @@ Create a file in `/src/plugins/[category]/[name].js`:
  * @file Ping command handler
  * @module plugins/info/ping
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 let handler = async (m, { conn }) => {
@@ -547,7 +547,7 @@ _💖 Acknowledgments_
 
   <hr/>
 
-  <p><strong>Maintained by the o3din community || <a href="https://github.com/naruyaizumi">© 2024 - 2026 Naruya Izumi</a></strong></p>
+  <p><strong>Maintained by the o3din community || <a href="https://github.com/o3din">© 2024 - 2026 o3din</a></strong></p>
   
 <br/><br/>
 

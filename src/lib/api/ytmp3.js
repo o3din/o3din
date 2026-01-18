@@ -4,7 +4,7 @@
  * @description Multi-endpoint YouTube to MP3 converter for extracting
  * audio from YouTube videos with fallback strategy.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

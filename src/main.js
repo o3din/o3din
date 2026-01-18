@@ -4,7 +4,7 @@
  * @description Main initialization file for o3din WhatsApp bot - handles
  * authentication, connection management, plugin loading, and graceful shutdown.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import "./config.js";
@@ -21,7 +21,7 @@ import {
     reloadAllPlugins,
     reloadSinglePlugin,
 } from "#core/connection.js";
-import { naruyaizumi } from "#core/socket.js";
+import { o3din } from "#core/socket.js";
 
 /**
  * Pairing configuration from global config
@@ -227,7 +227,7 @@ async function o3din() {
     };
 
     // Create global connection instance
-    global.conn = naruyaizumi(opt);
+    global.conn = o3din(opt);
     global.conn.isInit = false;
 
     // Handle pairing for new sessions

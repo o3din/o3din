@@ -2,7 +2,7 @@
  * @file YouTube Music downloader command handler
  * @module plugins/downloader/play
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

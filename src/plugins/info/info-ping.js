@@ -2,7 +2,7 @@
  * @file Ping command handler
  * @module plugins/info/ping
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

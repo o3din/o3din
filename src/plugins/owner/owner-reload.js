@@ -2,7 +2,7 @@
  * @file Reload plugins command handler
  * @module plugins/owner/reload
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

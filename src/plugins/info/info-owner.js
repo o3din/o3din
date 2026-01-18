@@ -2,7 +2,7 @@
  * @file Owner/creator information command handler
  * @module plugins/info/owner
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**
@@ -31,7 +31,7 @@ let handler = async (m, { conn }) => {
 VERSION:3.0
 N:;Naruya;;;
 FN:Naruya
-X-WA-BIZ-NAME:mkfs.ext4 /dev/naruyaizumi
+X-WA-BIZ-NAME:o3din
 X-WA-BIZ-DESCRIPTION:𝙊𝙬𝙣𝙚𝙧 𝙤𝙛 𝙇𝙞𝙤𝙧𝙖 𝙎𝙘𝙧𝙞𝙥𝙩
 TEL;waid=6283143663697:+62 831-4366-3697
 END:VCARD`;
@@ -45,7 +45,7 @@ END:VCARD`;
         },
         message: {
             contactMessage: {
-                displayName: "Naruya Izumi",
+                displayName: "o3din",
                 vcard: v,
             },
         },
@@ -70,7 +70,7 @@ END:VCARD`;
                                     value: 999999999999999,
                                     offset: 0,
                                 },
-                                reference_id: "NARUYAIZUMI",
+                                reference_id: "o3din",
                                 type: "physical-goods",
                                 order: {
                                     status: "pending",
@@ -81,7 +81,7 @@ END:VCARD`;
                                     order_type: "ORDER",
                                     items: [
                                         {
-                                            name: "naruyaizumi",
+                                            name: "o3din",
                                             amount: {
                                                 value: 999999999999999,
                                                 offset: 0,
@@ -98,8 +98,8 @@ END:VCARD`;
                                     {
                                         type: "pix_static_code",
                                         pix_static_code: {
-                                            merchant_name: "naruyaizumi",
-                                            key: "mkfs.ext4 /dev/naruyaizumi",
+                                            merchant_name: "o3din",
+                                            key: "o3din",
                                             key_type: "EVP",
                                         },
                                     },
@@ -119,7 +119,7 @@ END:VCARD`;
         m.chat,
         {
             contacts: {
-                displayName: "Naruya Izumi",
+                displayName: "o3din",
                 contacts: [{ vcard: v }],
             },
             contextInfo: {

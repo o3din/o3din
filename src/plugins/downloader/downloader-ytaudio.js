@@ -2,7 +2,7 @@
  * @file YouTube to MP3 converter command handler
  * @module plugins/downloader/ytmp3
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

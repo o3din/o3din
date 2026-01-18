@@ -2,7 +2,7 @@
  * @file Set bot bio command handler
  * @module plugins/owner/setbio
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

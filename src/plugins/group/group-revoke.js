@@ -2,7 +2,7 @@
  * @file Revoke group invitation link command handler
  * @module plugins/group/revoke
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

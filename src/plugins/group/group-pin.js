@@ -2,7 +2,7 @@
  * @file Pin message command handler
  * @module plugins/group/pin
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

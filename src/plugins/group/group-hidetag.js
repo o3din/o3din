@@ -2,7 +2,7 @@
  * @file Hidetag command handler
  * @module plugins/group/hidetag
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

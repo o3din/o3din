@@ -4,7 +4,7 @@
  * @description Provides signal/process management, database configuration,
  * and validation utilities for graceful shutdown and resource management.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /* eslint no-unused-vars: ["error", { "argsIgnorePattern": "^_" }] */

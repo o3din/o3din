@@ -274,10 +274,10 @@ Changes take effect immediately upon posting.
 
 ## Contact Information
 
-**Project Maintainer**: Naruya Izumi  
-**GitHub**: [@naruyaizumi](https://github.com/naruyaizumi)  
+**Project Maintainer**: o3din  
+**GitHub**: [@o3din](https://github.com/o3din)  
 **Email**: o3din.bot.official@gmail.com  
-**Repository**: https://github.com/naruyaizumi/o3din
+**Repository**: https://github.com/o3din/o3din
 
 ---
 

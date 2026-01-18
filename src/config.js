@@ -4,7 +4,7 @@
  * @description Core configuration manager, database setup, and utility functions
  * for o3din bot with SQLite persistence and environment-based configuration.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { join } from "node:path";
@@ -464,9 +464,9 @@ const initializeConfig = () => {
         pairingNumber: (Bun.env.PAIRING_NUMBER || "").trim(),
         pairingCode: (Bun.env.PAIRING_CODE || "").trim().toUpperCase() || generatePairingCode(),
         watermark: Bun.env.WATERMARK || "o3din",
-        author: Bun.env.AUTHOR || "Naruya Izumi",
+        author: Bun.env.AUTHOR || "o3din",
         stickpack: Bun.env.STICKPACK || "o3din",
-        stickauth: Bun.env.STICKAUTH || "© Naruya Izumi",
+        stickauth: Bun.env.STICKAUTH || "© o3din",
         thumbnailUrl: sanitizeUrl(Bun.env.THUMBNAIL_URL),
     };
 

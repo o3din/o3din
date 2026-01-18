@@ -2,7 +2,7 @@
  * @file Group status message command handler
  * @module plugins/owner/groupstatus
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

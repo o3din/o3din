@@ -2,7 +2,7 @@
  * @file File upload to various servers command handler
  * @module plugins/tools/upload
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

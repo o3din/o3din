@@ -2,7 +2,7 @@
  * @file Group-only mode command handler
  * @module plugins/owner/gconly
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

@@ -2,7 +2,7 @@
  * @file Quote chat sticker generator command handler
  * @module plugins/maker/quotechat
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { sticker } from "#lib/sticker.js";

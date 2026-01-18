@@ -2,7 +2,7 @@
  * @file System information command handler
  * @module plugins/info/os
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

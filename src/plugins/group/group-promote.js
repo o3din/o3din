@@ -2,7 +2,7 @@
  * @file Promote member to admin command handler
  * @module plugins/group/promote
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

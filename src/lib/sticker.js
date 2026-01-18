@@ -4,7 +4,7 @@
  * @description Converts images and videos to WhatsApp sticker format (WebP) with EXIF metadata.
  * Uses Bun's native APIs and external conversion services for efficient processing.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import webp from "node-webpmux";
@@ -232,7 +232,7 @@ export async function addExif(webpBuffer, metadata = {}) {
     const exifData = {
         "sticker-pack-id": metadata.packId || `o3din-${Date.now()}`,
         "sticker-pack-name": metadata.packName || "o3din",
-        "sticker-pack-publisher": metadata.packPublish || "© Naruya Izumi",
+        "sticker-pack-publisher": metadata.packPublish || "© o3din",
         "android-app-store-link":
             metadata.androidApp || "https://play.google.com/store/apps/details?id=com.whatsapp",
         "ios-app-store-link":

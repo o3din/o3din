@@ -4,7 +4,7 @@
  * @description Multi-endpoint Instagram downloader with fallback strategy
  * and content type detection for videos and images.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

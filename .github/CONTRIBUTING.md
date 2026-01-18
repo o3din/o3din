@@ -70,7 +70,7 @@ All reports will be reviewed promptly and confidentially.
 3. **Add upstream remote**:
 
     ```bash
-    git remote add upstream https://github.com/naruyaizumi/o3din.git
+    git remote add upstream https://github.com/o3din/o3din.git
     ```
 
 4. **Verify remotes**:

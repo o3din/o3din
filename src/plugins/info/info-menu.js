@@ -2,7 +2,7 @@
  * @file Menu/Help command handler
  * @module plugins/info/menu
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**
@@ -109,7 +109,7 @@ async function all(conn, m, help, prefix, time) {
                     title: "All Commands",
                     body: "Complete List",
                     thumbnailUrl: "https://qu.ax/TLqUB.png",
-                    sourceUrl: "https://linkbio.co/naruyaizumi",
+                    sourceUrl: "https://linkbio.co/o3din",
                     mediaType: 1,
                     renderLargerThumbnail: true,
                 },
@@ -147,8 +147,8 @@ async function main(conn, m, pkg, prefix, cmd, time) {
         `VPS Up  : ${upSys}`,
         `Bot Up  : ${upBot}`,
         "",
-        `Owner   : ${pkg.author?.name || "Naruya Izumi"}`,
-        `Social  : https://linkbio.co/naruyaizumi`,
+        `Owner   : ${pkg.author?.name || "o3din"}`,
+        `Social  : https://linkbio.co/o3din`,
         "─".repeat(25),
         "Select category below",
         "```",
@@ -192,7 +192,7 @@ async function main(conn, m, pkg, prefix, cmd, time) {
                 productImageCount: 1,
             },
             businessOwnerJid: "113748182302861@lid",
-            caption: "*© Naruya Izumi 2024 - 2026*",
+            caption: "*© o3din 2024 - 2026*",
             title: "o3din Menu",
             footer: cap,
             interactiveButtons: [
@@ -256,7 +256,7 @@ async function show(conn, m, help, cat, prefix, time) {
                     title: `${META[cat]} Commands`,
                     body: `${cmds.length} commands`,
                     thumbnailUrl: "https://qu.ax/TLqUB.png",
-                    sourceUrl: "https://linkbio.co/naruyaizumi",
+                    sourceUrl: "https://linkbio.co/o3din",
                     mediaType: 1,
                     renderLargerThumbnail: true,
                 },
@@ -373,7 +373,7 @@ async function q() {
                                     value: 999999999999999,
                                     offset: 0,
                                 },
-                                reference_id: "NARUYAIZUMI",
+                                reference_id: "o3din",
                                 type: "physical-goods",
                                 order: {
                                     status: "pending",
@@ -384,7 +384,7 @@ async function q() {
                                     order_type: "ORDER",
                                     items: [
                                         {
-                                            name: "naruyaizumi",
+                                            name: "o3din",
                                             amount: {
                                                 value: 999999999999999,
                                                 offset: 0,
@@ -401,8 +401,8 @@ async function q() {
                                     {
                                         type: "pix_static_code",
                                         pix_static_code: {
-                                            merchant_name: "naruyaizumi",
-                                            key: "mkfs.ext4 /dev/naruyaizumi",
+                                            merchant_name: "o3din",
+                                            key: "o3din",
                                             key_type: "EVP",
                                         },
                                     },

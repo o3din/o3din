@@ -2,7 +2,7 @@
  * @file Set bot profile picture command handler
  * @module plugins/owner/setpp
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

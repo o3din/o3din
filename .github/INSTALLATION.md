@@ -54,7 +54,7 @@ Network  : Stable internet connection
 The automated installer handles everything for you:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/naruyaizumi/o3din/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/o3din/o3din/main/install.sh | bash
 ```
 
 **What it does:**
@@ -206,10 +206,10 @@ bun --version
 
 ```bash
 # Using HTTPS
-git clone https://github.com/naruyaizumi/o3din.git
+git clone https://github.com/o3din/o3din.git
 
 # Or using SSH
-git clone git@github.com:naruyaizumi/o3din.git
+git clone git@github.com:o3din/o3din.git
 
 # Navigate to directory
 cd o3din
@@ -661,4 +661,4 @@ htop  # or top
 ## 📞 Need Help?
 
 - **WhatsApp Group**: [Join Community](https://chat.whatsapp.com/FtMSX1EsGHTJeynu8QmjpG)
-- **GitHub Issues**: [Report Bug](https://github.com/naruyaizumi/o3din/issues)
+- **GitHub Issues**: [Report Bug](https://github.com/o3din/o3din/issues)

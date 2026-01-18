@@ -4,7 +4,7 @@
  * @description Multi-endpoint TikTok downloader for extracting videos and images
  * from TikTok posts with comprehensive fallback strategy.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

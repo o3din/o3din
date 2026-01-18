@@ -4,7 +4,7 @@
  * @description Serializes WhatsApp message objects, normalizes protocol messages,
  * and adds connection context for enhanced message handling.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { proto } from "baileys";

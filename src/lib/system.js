@@ -4,7 +4,7 @@
  * @description Comprehensive system information gathering and monitoring tools
  * for server diagnostics, performance tracking, and health reporting.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { $ } from "bun";

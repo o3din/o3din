@@ -4,7 +4,7 @@
  * @description Multi-endpoint YouTube Music search and downloader with
  * metadata extraction and fallback strategy for audio content.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

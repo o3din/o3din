@@ -2,7 +2,7 @@
  * @file Script information command handler
  * @module plugins/info/script
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**
@@ -35,7 +35,7 @@ Repository: https://github.com/o3din/o3din/
 Report Bug: https://github.com/o3din/o3din/issues
 Pull Req: https://github.com/o3din/o3din/pulls
 
-© 2024 – 2025 Naruya Izumi • All Rights Reserved
+© 2024 – 2025 o3din • All Rights Reserved
     `.trim();
 
     const q = {
@@ -78,15 +78,15 @@ Pull Req: https://github.com/o3din/o3din/pulls
                     url: "https://files.catbox.moe/wwboj3.jpg",
                 },
                 productId: "32409523241994909",
-                title: "mkfs.ext4 /dev/naruyaizumi",
+                title: "o3din",
                 description: "",
                 currencyCode: "IDR",
                 priceAmount1000: String(23 * 2 ** 32 + 1215752192),
                 retailerId: "IZUMI",
-                url: "https://linkbio.co/naruyaizumi",
+                url: "https://linkbio.co/o3din",
                 productImageCount: 5,
                 signedUrl:
-                    "https://l.wl.co/l/?u=https%3A%2F%2Flinkbio.co%2Fnaruyaizumi&e=AT065QDZzUpFex4H3JaKX1B3jFxLs90G3NEOHbP-LeDGmNM4QfwzF76CAPV6ODSxeErfWu-ZjaaihkWeRUJcUKOdiAfCTnSh3v8uQMqc2-eqKvM8EYzip2AAR-5GsbNJH16tEQ",
+                    "https://l.wl.co/l/?u=https%3A%2F%2Flinkbio.co%2Fo3din&e=AT065QDZzUpFex4H3JaKX1B3jFxLs90G3NEOHbP-LeDGmNM4QfwzF76CAPV6ODSxeErfWu-ZjaaihkWeRUJcUKOdiAfCTnSh3v8uQMqc2-eqKvM8EYzip2AAR-5GsbNJH16tEQ",
             },
             businessOwnerJid: "113748182302861@lid",
             footer: txt,
@@ -95,7 +95,7 @@ Pull Req: https://github.com/o3din/o3din/pulls
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: "120363144038483540@newsletter",
-                    newsletterName: "mkfs.ext4 /dev/naruyaizumi",
+                    newsletterName: "o3din",
                 },
             },
         },

@@ -4,7 +4,7 @@
  * @description Binds WhatsApp connection events to in-memory store operations
  * for real-time data synchronization and caching.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import { MemoryStore, EVENT_PRIORITY } from "./core.js";

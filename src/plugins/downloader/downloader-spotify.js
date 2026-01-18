@@ -2,7 +2,7 @@
  * @file Spotify downloader command handler
  * @module plugins/downloader/spotify
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

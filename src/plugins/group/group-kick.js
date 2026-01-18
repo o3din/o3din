@@ -2,7 +2,7 @@
  * @file Remove member from group command handler
  * @module plugins/group/kick
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**

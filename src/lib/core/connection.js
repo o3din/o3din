@@ -4,13 +4,13 @@
  * @description Plugin system manager, event handling, and connection lifecycle
  * management for o3din bot with automatic reconnection and hot-reload capabilities.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /* global conn */
 import { readdir, stat } from "node:fs/promises";
 import { join, relative, normalize } from "node:path";
-import { naruyaizumi } from "./socket.js";
+import { o3din } from "./socket.js";
 
 /**
  * Recursively discovers all plugin files in a directory
@@ -369,7 +369,7 @@ export class EventManager {
                 }
 
                 // Create new connection
-                global.conn = naruyaizumi(connectionOptions);
+                global.conn = o3din(connectionOptions);
                 eventManager.isInit = true;
             }
 

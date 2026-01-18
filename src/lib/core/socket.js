@@ -4,7 +4,7 @@
  * @description Enhanced WhatsApp WebSocket wrapper with message queueing,
  * connection utilities, and message processing pipeline.
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 import bind from "./store/store.js";
@@ -109,7 +109,7 @@ const messageQueue = new MessageQueue();
 /**
  * Creates enhanced WhatsApp socket connection
  * @export
- * @function naruyaizumi
+ * @function o3din
  * @param {Object} connectionOptions - Baileys socket options
  * @returns {Object} Enhanced connection object
  *
@@ -127,7 +127,7 @@ const messageQueue = new MessageQueue();
  * - Efficient media streaming with chunk aggregation
  * - Automatic connection state management
  */
-export function naruyaizumi(connectionOptions) {
+export function o3din(connectionOptions) {
     const conn = makeWASocket(connectionOptions);
 
     // Bind store management

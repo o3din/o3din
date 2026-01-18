@@ -2,7 +2,7 @@
  * @file Control bot response mode in chat
  * @module plugins/group/botmode
  * @license Apache-2.0
- * @author Naruya Izumi
+ * @author o3din
  */
 
 /**
