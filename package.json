@@ -11,11 +11,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/naruyaizumi/liora.git"
+        "url": "https://github.com/o3din/o3din.git"
     },
-    "homepage": "https://github.com/naruyaizumi/liora#readme",
+    "homepage": "https://github.com/o3din/o3din.git#readme",
     "bugs": {
-        "url": "https://github.com/naruyaizumi/liora/issues"
+        "url": "https://github.com/o3din/o3din.git/issues"
     },
     "engines": {
         "bun": ">=1.3.0"

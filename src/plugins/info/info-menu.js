@@ -207,7 +207,7 @@ async function main(conn, m, pkg, prefix, cmd, time) {
                     name: "cta_url",
                     buttonParamsJson: JSON.stringify({
                         display_text: "Script",
-                        url: "https://github.com/naruyaizumi/liora",
+                        url: "https://github.com/o3din/o3din.git",
                     }),
                 },
             ],
@@ -235,14 +235,14 @@ async function show(conn, m, help, cat, prefix, time) {
     const txt =
         cmds.length > 0
             ? [
-                  "```",
-                  `[${time}] ${META[cat]} Commands`,
-                  "─".repeat(25),
-                  cmds.join("\n"),
-                  "─".repeat(25),
-                  `Total: ${cmds.length}`,
-                  "```",
-              ].join("\n")
+                "```",
+                `[${time}] ${META[cat]} Commands`,
+                "─".repeat(25),
+                cmds.join("\n"),
+                "─".repeat(25),
+                `Total: ${cmds.length}`,
+                "```",
+            ].join("\n")
             : `No commands for ${META[cat]}`;
 
     return conn.sendMessage(

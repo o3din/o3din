@@ -31,9 +31,9 @@ let handler = async (m, { conn }) => {
 Liora Repository
 
 Project Script Izumi
-Repository: https://github.com/naruyaizumi/liora
-Report Bug: https://github.com/naruyaizumi/liora/issues
-Pull Req: https://github.com/naruyaizumi/liora/pulls
+Repository: https://github.com/o3din/o3din/
+Report Bug: https://github.com/o3din/o3din/issues
+Pull Req: https://github.com/o3din/o3din/pulls
 
 © 2024 – 2025 Naruya Izumi • All Rights Reserved
     `.trim();

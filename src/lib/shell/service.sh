@@ -6,7 +6,7 @@ create_service() {
     cat > "$SERVICE_FILE" <<'EOL'
 [Unit]
 Description=Liora WhatsApp Bot
-Documentation=https://github.com/naruyaizumi/liora
+Documentation=https://github.com/o3din/o3din
 Wants=network-online.target
 After=network-online.target
 AssertPathExists=/root/liora

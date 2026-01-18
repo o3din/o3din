@@ -9,7 +9,7 @@ create_cli() {
 SERVICE="liora"
 WORK_DIR="/root/liora"
 BUN_PATH="/root/.bun/bin/bun"
-REPO_URL="https://github.com/naruyaizumi/liora.git"
+REPO_URL="https://github.com/o3din/o3din.git"
 
 print_error() { echo "[ERROR] $1" >&2; }
 print_success() { echo "[SUCCESS] $1"; }

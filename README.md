@@ -204,7 +204,7 @@ For detailed installation instructions, see **[INSTALLATION.md](.github/INSTALLA
 **Automated Installation for Linux (Ubuntu/Debian)**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/naruyaizumi/liora/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/o3din/o3din/main/install.sh | bash
 ```
 
 **Post-installation:**
@@ -525,7 +525,7 @@ _💖 Acknowledgments_
 
 **Community & Contributors**
 
-- 💚 All [contributors](https://github.com/naruyaizumi/liora/graphs/contributors) who made this possible
+- 💚 All [contributors](https://github.com/o3din/o3din.git/graphs/contributors) who made this possible
 - 🌍 The amazing open-source community
 - ⭐ Everyone who starred this repository
 - 🐛 Bug reporters and feature requesters
@@ -541,8 +541,8 @@ _💖 Acknowledgments_
 
   <!-- Star History -->
   <p><strong>🌟 Star History</strong></p>
-  <a href="https://star-history.com/#naruyaizumi/liora&Date">
-    <img src="https://api.star-history.com/svg?repos=naruyaizumi/liora&type=Date" width="700" alt="Star History Chart"/>
+  <a href="https://star-history.com/#o3din/o3din&Date">
+    <img src="https://api.star-history.com/svg?repos=o3din/o3din&type=Date" width="700" alt="Star History Chart"/>
   </a>
 
   <hr/>
