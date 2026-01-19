@@ -296,7 +296,7 @@ export async function handler(chatUpdate) {
 
         // Get last message and serialize
         const m = smsg(this, messages[messages.length - 1]);
-        if (!m || m.isBaileys || m.fromMe) return;
+        if (!m || m.isBaileys) return;
 
         // Load settings and determine ownership
         const settings = global.db?.data?.settings?.[this.user.lid] || {};
