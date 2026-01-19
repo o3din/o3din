@@ -319,17 +319,26 @@ export async function handler(chatUpdate) {
 
         // Debug logging for owner check
         if (m.text?.startsWith(".")) {
-            global.logger?.debug({
+            global.logger?.info({
                 sender: m.sender,
                 senderLid,
                 senderPhone,
                 senderResolvedPhone,
                 regOwners,
-                configOwner: global.config.owner
+                configOwner: global.config.owner,
+                fromMe: m.fromMe,
+                keyParticipant: m.key?.participant,
+                botUser: this.user?.id
             }, "Owner check debug");
         }
 
+        // Check if sender is the bot's own number (primary owner)
+        const botPhone = this.user?.id?.split(":")[0] || this.user?.id?.split("@")[0] || "";
+        const pairingNumber = global.config.pairingNumber || "";
+        const isBotSelf = senderPhone === botPhone || senderPhone === pairingNumber;
+
         const isOwner = m.fromMe ||
+            isBotSelf ||
             regOwners.includes(senderLid) ||
             regOwners.includes(senderPhone) ||
             regOwners.includes(senderResolvedPhone);
