@@ -49,11 +49,11 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         await global.loading(m, conn);
 
         const img = await q.download();
-        const up = await uploader(img);
+        const uploadResult = await uploader(img);
 
-        if (!up) throw new Error("Upload failed");
+        if (!uploadResult?.success || !uploadResult?.url) throw new Error("Upload failed");
 
-        const url = `https://api.nekolabs.web.id/canvas/meme?imageUrl=${encodeURIComponent(up)}&textT=${encodeURIComponent(top)}&textB=${encodeURIComponent(bottom)}`;
+        const url = `https://api.nekolabs.web.id/canvas/meme?imageUrl=${encodeURIComponent(uploadResult.url)}&textT=${encodeURIComponent(top)}&textB=${encodeURIComponent(bottom)}`;
         const res = await fetch(url);
 
         if (!res.ok) throw new Error("API request failed");
