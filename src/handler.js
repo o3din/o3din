@@ -301,8 +301,9 @@ export async function handler(chatUpdate) {
         // Load settings and determine ownership
         const settings = global.db?.data?.settings?.[this.user.lid] || {};
         const senderLid = await resolveLid(m.sender, this);
+        const senderPhone = m.sender.split("@")[0]; // Phone number without @s.whatsapp.net
         const regOwners = global.config.owner.map((id) => id.toString().split("@")[0]);
-        const isOwner = m.fromMe || regOwners.includes(senderLid);
+        const isOwner = m.fromMe || regOwners.includes(senderLid) || regOwners.includes(senderPhone);
 
         // Group-specific variables
         let groupMetadata = {};
