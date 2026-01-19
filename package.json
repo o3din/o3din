@@ -25,7 +25,7 @@
     "dependencies": {
         "@napi-rs/canvas": "^0.1.84",
         "async-mutex": "^0.5.0",
-        "baileys": "github:WhiskeySockets/Baileys",
+        "baileys": "github:WhiskeySockets/Baileys#fix/lazy-loading-proto",
         "eventemitter3": "^5.0.1",
         "file-type": "^21.3.0",
         "node-webpmux": "^3.2.1",
