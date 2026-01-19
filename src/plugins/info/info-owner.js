@@ -29,10 +29,10 @@
 let handler = async (m, { conn }) => {
     const v = `BEGIN:VCARD
 VERSION:3.0
-N:;Naruya;;;
-FN:Naruya
+N:;o3din;;;
+FN:o3din
 X-WA-BIZ-NAME:o3din
-X-WA-BIZ-DESCRIPTION:𝙊𝙬𝙣𝙚𝙧 𝙤𝙛 𝙇𝙞𝙤𝙧𝙖 𝙎𝙘𝙧𝙞𝙥𝙩
+X-WA-BIZ-DESCRIPTION:𝙊𝙬𝙣𝙚𝙧 𝙤𝙛 𝙤3𝙙𝙞𝙣 𝙎𝙘𝙧𝙞𝙥𝙩
 TEL;waid=6283143663697:+62 831-4366-3697
 END:VCARD`;
 
