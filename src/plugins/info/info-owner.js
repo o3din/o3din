@@ -32,88 +32,9 @@ VERSION:3.0
 N:;o3din;;;
 FN:o3din
 X-WA-BIZ-NAME:o3din
-X-WA-BIZ-DESCRIPTION:𝙊𝙬𝙣𝙚𝙧 𝙤𝙛 𝙤3𝙙𝙞𝙣 𝙎𝙘𝙧𝙞𝙥𝙩
-TEL;waid=6283143663697:+62 831-4366-3697
+X-WA-BIZ-DESCRIPTION:o3din Bot Owner
+TEL;waid=${global.config.owners?.[0] || "0"}:${global.config.owners?.[0] || "0"}
 END:VCARD`;
-
-    /*
-    const q = {
-        key: {
-            fromMe: false,
-            participant: "12066409886@s.whatsapp.net",
-            remoteJid: "status@broadcast",
-        },
-        message: {
-            contactMessage: {
-                displayName: "o3din",
-                vcard: v,
-            },
-        },
-    };
-    */
-
-    const q = {
-        key: {
-            fromMe: false,
-            participant: "13135550002@s.whatsapp.net",
-            remoteJid: "status@broadcast",
-        },
-        message: {
-            interactiveMessage: {
-                nativeFlowMessage: {
-                    buttons: {
-                        0: {
-                            name: "payment_info",
-                            buttonParamsJson: JSON.stringify({
-                                currency: "IDR",
-                                total_amount: {
-                                    value: 999999999999999,
-                                    offset: 0,
-                                },
-                                reference_id: "o3din",
-                                type: "physical-goods",
-                                order: {
-                                    status: "pending",
-                                    subtotal: {
-                                        value: 999999999999999,
-                                        offset: 0,
-                                    },
-                                    order_type: "ORDER",
-                                    items: [
-                                        {
-                                            name: "o3din",
-                                            amount: {
-                                                value: 999999999999999,
-                                                offset: 0,
-                                            },
-                                            quantity: 1,
-                                            sale_amount: {
-                                                value: 999999999999999,
-                                                offset: 0,
-                                            },
-                                        },
-                                    ],
-                                },
-                                payment_settings: [
-                                    {
-                                        type: "pix_static_code",
-                                        pix_static_code: {
-                                            merchant_name: "o3din",
-                                            key: "o3din",
-                                            key_type: "EVP",
-                                        },
-                                    },
-                                ],
-                                share_payment_status: false,
-                            }),
-                        },
-                        length: 1,
-                    },
-                },
-            },
-        },
-        participant: "13135550002@s.whatsapp.net",
-    };
 
     await conn.sendMessage(
         m.chat,
@@ -122,20 +43,8 @@ END:VCARD`;
                 displayName: "o3din",
                 contacts: [{ vcard: v }],
             },
-            contextInfo: {
-                externalAdReply: {
-                    title: "© 2024–2026 o3din",
-                    body: "Contact via WhatsApp",
-                    mediaType: 1,
-                    thumbnailUrl: "https://files.catbox.moe/8tw69l.jpeg",
-                    renderLargerThumbnail: true,
-
-                    showAdAttribution: true,
-                    sourceUrl: "https://wa.me/6283143663697",
-                },
-            },
         },
-        { quoted: q }
+        { quoted: m }
     );
 };
 
