@@ -444,7 +444,7 @@ const initializeConfig = () => {
             try {
                 const parsed = JSON.parse(ownersEnv);
                 if (Array.isArray(parsed)) {
-                    owners = parsed.filter((o) => typeof o === "string" && o.trim());
+                    owners = parsed.map((o) => String(o).trim()).filter(Boolean);
                 }
             } catch {
                 logger.warn("Invalid OWNERS format, use comma-separated values");
