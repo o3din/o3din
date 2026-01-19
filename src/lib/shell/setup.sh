@@ -2,7 +2,7 @@
 
 get_available_versions() {
     git ls-remote --tags --refs "$REPO_URL" 2>/dev/null | 
-    grep -oP 'refs/tags/(v)?\d+\.\d+\.\d+$' | 
+    (grep -oP 'refs/tags/(v)?\d+\.\d+\.\d+$' || true) | 
     sed 's|refs/tags/||' | 
     sort -Vr
 }
