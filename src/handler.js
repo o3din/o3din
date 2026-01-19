@@ -304,18 +304,35 @@ export async function handler(chatUpdate) {
         const senderPhone = m.sender.split("@")[0]; // Phone number without @s.whatsapp.net
         const regOwners = global.config.owner.map((id) => id.toString().split("@")[0]);
 
+        // Also try to resolve phone from LID if sender is using LID
+        let senderResolvedPhone = senderPhone;
+        if (m.sender.endsWith("@lid")) {
+            try {
+                const pnMapping = await this.signalRepository?.lidMapping?.getPNForLID?.(m.sender);
+                if (pnMapping) {
+                    senderResolvedPhone = pnMapping.split("@")[0];
+                }
+            } catch {
+                // Ignore resolution errors
+            }
+        }
+
         // Debug logging for owner check
         if (m.text?.startsWith(".")) {
             global.logger?.debug({
                 sender: m.sender,
                 senderLid,
                 senderPhone,
+                senderResolvedPhone,
                 regOwners,
                 configOwner: global.config.owner
             }, "Owner check debug");
         }
 
-        const isOwner = m.fromMe || regOwners.includes(senderLid) || regOwners.includes(senderPhone);
+        const isOwner = m.fromMe ||
+            regOwners.includes(senderLid) ||
+            regOwners.includes(senderPhone) ||
+            regOwners.includes(senderResolvedPhone);
 
         // Group-specific variables
         let groupMetadata = {};
