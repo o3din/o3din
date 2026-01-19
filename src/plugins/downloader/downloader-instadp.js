@@ -71,7 +71,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
             global.logger?.warn(`InstaDP Method 2 failed: ${e.message}`);
         }
 
-        // Method 3: Alyachan API (Last Resort)
+        // Method 3: Alyachan API
         try {
             const res = await fetch(`https://api.alyachan.dev/api/igstalk?user=${username}&apikey=free`);
             if (!res.ok) throw new Error("API 3 failed");
@@ -86,6 +86,48 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 • *User*: @${username}
 • *Name*: ${data.fullname}
 • *Link*: https://instagram.com/${username}`
+            }, { quoted: m });
+            return;
+        } catch (e) {
+            global.logger?.warn(`InstaDP Method 3 failed: ${e.message}`);
+        }
+
+        // Method 4: Maher API
+        try {
+            const res = await fetch(`https://api.maher-zubair.tech/instagram/stalk?q=${username}`);
+            if (!res.ok) throw new Error("API 4 failed");
+            const json = await res.json();
+            if (json.status !== 200 || !json.result) throw new Error("Failed");
+
+            const data = json.result;
+            await conn.sendMessage(m.chat, {
+                image: { url: data.photo_profile || data.photo_profile_url },
+                caption: `*Instagram Profile*
+
+• *Name*: ${data.name || username}
+• *User*: @${data.username}
+• *Bio*: ${data.biography || "-"}`
+            }, { quoted: m });
+            return;
+        } catch (e) {
+            global.logger?.warn(`InstaDP Method 4 failed: ${e.message}`);
+        }
+
+        // Method 5: Deliriuss API
+        try {
+            const res = await fetch(`https://deliriussapi-oficial.vercel.app/tools/igstalk?q=${username}`);
+            if (!res.ok) throw new Error("API 5 failed");
+            const json = await res.json();
+            if (!json.status || !json.data) throw new Error("Failed");
+
+            const data = json.data;
+            await conn.sendMessage(m.chat, {
+                image: { url: data.profileHD || data.profilePic },
+                caption: `*Instagram Profile*
+
+• *Name*: ${data.fullName || username}
+• *User*: @${data.username}
+• *Bio*: ${data.biography || "-"}`
             }, { quoted: m });
             return;
         } catch (e) {
