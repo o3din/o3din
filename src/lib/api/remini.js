@@ -73,9 +73,9 @@ export async function remini(buf) {
                 const reader = res.body.getReader();
 
                 while (true) {
-                    const { done, val } = await reader.read();
+                    const { done, value } = await reader.read();
                     if (done) break;
-                    chunks.push(val);
+                    chunks.push(value);
                 }
 
                 reader.releaseLock();
