@@ -37,12 +37,20 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 
         await global.loading(m, conn);
 
-        const url = `https://api.nekolabs.web.id/canvas/carbonify?code=${encodeURIComponent(code)}`;
-        const res = await fetch(url);
-
-        if (!res.ok) throw new Error("API request failed");
-
-        const buf = Buffer.from(await res.arrayBuffer());
+        // Try primary API
+        let buf;
+        try {
+            const url = `https://api.nekolabs.web.id/canvas/carbonify?code=${encodeURIComponent(code)}`;
+            const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
+            if (!res.ok) throw new Error("Primary API failed");
+            buf = Buffer.from(await res.arrayBuffer());
+        } catch {
+            // Fallback API
+            const fallbackUrl = `https://carbonnowsh.herokuapp.com/?code=${encodeURIComponent(code)}&theme=dracula&bg=rgba(171,184,195,1)&t=seti&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false`;
+            const res = await fetch(fallbackUrl, { signal: AbortSignal.timeout(15000) });
+            if (!res.ok) throw new Error("All APIs failed");
+            buf = Buffer.from(await res.arrayBuffer());
+        }
 
         await conn.sendMessage(
             m.chat,
@@ -50,7 +58,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
             { quoted: m }
         );
     } catch (e) {
-        conn.logger.error(e);
+        global.logger?.error(e);
         m.reply(`Error: ${e.message}`);
     } finally {
         await global.loading(m, conn, true);
