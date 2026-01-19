@@ -185,7 +185,7 @@ PAIRING_CODE=$PAIRING_CODE
 # BOT METADATA
 # ============================================
 WATERMARK=o3din
-AUTHOR=Naruya Izumi
+AUTHOR=o3din
 THUMBNAIL_URL=https://qu.ax/DdwBH.jpg
 
 # ============================================
