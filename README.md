@@ -3,7 +3,9 @@
 <!-- Wave Header with Typing Animation -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=o3din%20Bot&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=fff&desc=Enterprise-Grade%20WhatsApp%20Bot%20Framework&descAlignY=55&descSize=18" width="100%" />
 
-![o3din Banner](Image.png)
+<p align="center">
+  <img src='./banner.png' width='800' alt="ZapFile User Interface" style="border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
+</p>
 
 _🌸 o3din_
 
