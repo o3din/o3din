@@ -28,10 +28,7 @@ detect_distro() {
 install_system_packages() {
     echo "Installing essential packages..."
     
-    $PKG_UPDATE || {
-        echo "Failed to update package lists"
-        exit 1
-    }
+    $PKG_UPDATE || echo "[WARNING] Failed to update some package lists. Attempting to proceed..."
     
     $PKG_INSTALL $DEPS || {
         echo "Failed to install dependencies"
