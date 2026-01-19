@@ -303,6 +303,18 @@ export async function handler(chatUpdate) {
         const senderLid = await resolveLid(m.sender, this);
         const senderPhone = m.sender.split("@")[0]; // Phone number without @s.whatsapp.net
         const regOwners = global.config.owner.map((id) => id.toString().split("@")[0]);
+
+        // Debug logging for owner check
+        if (m.text?.startsWith(".")) {
+            global.logger?.debug({
+                sender: m.sender,
+                senderLid,
+                senderPhone,
+                regOwners,
+                configOwner: global.config.owner
+            }, "Owner check debug");
+        }
+
         const isOwner = m.fromMe || regOwners.includes(senderLid) || regOwners.includes(senderPhone);
 
         // Group-specific variables
