@@ -15,128 +15,121 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     await global.loading(m, conn);
 
     try {
-        // Method 1: Siputzx API
+        let ppUrl = null;
+        let userData = null;
+
+        // Method 1: Direct Instagram Web Scraping
         try {
-            const res = await fetch(`https://api.siputzx.my.id/api/s/igstalk?username=${username}`);
-            if (!res.ok) throw new Error("API 1 failed");
+            const res = await fetch(`https://www.instagram.com/api/v1/users/web_profile_info/?username=${username}`, {
+                headers: {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                    "X-IG-App-ID": "936619743392459",
+                    "X-Requested-With": "XMLHttpRequest",
+                    "Accept": "application/json"
+                }
+            });
+            if (res.ok) {
+                const json = await res.json();
+                const user = json?.data?.user;
+                if (user) {
+                    ppUrl = user.profile_pic_url_hd || user.profile_pic_url;
+                    userData = {
+                        fullname: user.full_name,
+                        bio: user.biography,
+                        followers: user.edge_followed_by?.count,
+                        following: user.edge_follow?.count,
+                        posts: user.edge_owner_to_timeline_media?.count
+                    };
+                }
+            }
+        } catch (e) {
+            global.logger?.warn(`InstaDP Method 1: ${e.message}`);
+        }
 
-            const json = await res.json();
-            if (!json.status || !json.data) throw new Error("User not found");
+        // Method 2: i.instagram.com API
+        if (!ppUrl) {
+            try {
+                // First get user ID from username
+                const searchRes = await fetch(`https://www.instagram.com/web/search/topsearch/?query=${username}`, {
+                    headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" }
+                });
+                if (searchRes.ok) {
+                    const searchJson = await searchRes.json();
+                    const foundUser = searchJson?.users?.find(u => u.user?.username?.toLowerCase() === username.toLowerCase());
+                    if (foundUser?.user) {
+                        ppUrl = foundUser.user.profile_pic_url;
+                        userData = {
+                            fullname: foundUser.user.full_name,
+                            bio: "",
+                            followers: 0,
+                            following: 0,
+                            posts: 0
+                        };
+                    }
+                }
+            } catch (e) {
+                global.logger?.warn(`InstaDP Method 2: ${e.message}`);
+            }
+        }
 
-            const { url_hd_profile_pic, url_profile_pic, fullname, posts, followers, following, bio } = json.data;
-            const pp = url_hd_profile_pic || url_profile_pic;
+        // Method 3: Third-party API fallback
+        if (!ppUrl) {
+            const apis = [
+                `https://api.siputzx.my.id/api/s/igstalk?username=${username}`,
+                `https://api.maher-zubair.tech/instagram/stalk?q=${username}`,
+                `https://deliriussapi-oficial.vercel.app/tools/igstalk?q=${username}`
+            ];
 
-            if (!pp) throw new Error("No PP");
+            for (const apiUrl of apis) {
+                try {
+                    const res = await fetch(apiUrl, { signal: AbortSignal.timeout(10000) });
+                    if (!res.ok) continue;
+                    const json = await res.json();
 
-            await conn.sendMessage(m.chat, {
-                image: { url: pp },
-                caption: `*Instagram Profile* (HD)
+                    // Try to extract PP from various response formats
+                    const data = json.data || json.result || json;
+                    if (data) {
+                        ppUrl = data.url_hd_profile_pic || data.profile_pic_url_hd ||
+                            data.profileHD || data.profile || data.photo_profile ||
+                            data.hd_profile_pic_url_info?.url || data.profile_pic_url;
+                        if (ppUrl) {
+                            userData = {
+                                fullname: data.fullname || data.full_name || data.name || username,
+                                bio: data.bio || data.biography || "-",
+                                followers: data.followers || data.edge_followed_by?.count || 0,
+                                following: data.following || 0,
+                                posts: data.posts || 0
+                            };
+                            break;
+                        }
+                    }
+                } catch (e) {
+                    continue;
+                }
+            }
+        }
 
-• *Name*: ${fullname || username}
+        if (!ppUrl) {
+            throw new Error("Could not fetch profile. The account may be private or doesn't exist.");
+        }
+
+        const caption = `*Instagram Profile*
+
+• *Name*: ${userData?.fullname || username}
 • *Username*: @${username}
-• *Followers*: ${followers || 0}
-• *Following*: ${following || 0}
-• *Posts*: ${posts || 0}
-• *Bio*: ${bio || "-"}`
-            }, { quoted: m });
-            return;
-        } catch (e) {
-            global.logger?.warn(`InstaDP Method 1 failed: ${e.message}`);
-        }
+• *Followers*: ${userData?.followers || "-"}
+• *Following*: ${userData?.following || "-"}
+• *Posts*: ${userData?.posts || "-"}
+• *Bio*: ${userData?.bio || "-"}`;
 
-        // Method 2: NekoLabs API (Fallback)
-        try {
-            const res = await fetch(`https://api.nekolabs.web.id/api/igstalk?username=${username}`);
-            if (!res.ok) throw new Error("API 2 failed");
-
-            const json = await res.json();
-            const data = json.result || json.data;
-            if (!data) throw new Error("User not found");
-
-            const pp = data.hd_profile_pic_url_info?.url || data.profile_pic_url;
-
-            if (!pp) throw new Error("No PP");
-
-            await conn.sendMessage(m.chat, {
-                image: { url: pp },
-                caption: `*Instagram Profile* (HD)
-
-• *User*: @${username}
-• *Name*: ${data.full_name || username}
-• *Bio*: ${data.biography || "-"}
-• *Followers*: ${data.edge_followed_by?.count || 0}`
-            }, { quoted: m });
-            return;
-        } catch (e) {
-            global.logger?.warn(`InstaDP Method 2 failed: ${e.message}`);
-        }
-
-        // Method 3: Alyachan API
-        try {
-            const res = await fetch(`https://api.alyachan.dev/api/igstalk?user=${username}&apikey=free`);
-            if (!res.ok) throw new Error("API 3 failed");
-            const json = await res.json();
-            if (!json.status) throw new Error("Failed");
-
-            const data = json.data;
-            await conn.sendMessage(m.chat, {
-                image: { url: data.profileHD || data.profile },
-                caption: `*Instagram Profile*
-
-• *User*: @${username}
-• *Name*: ${data.fullname}
-• *Link*: https://instagram.com/${username}`
-            }, { quoted: m });
-            return;
-        } catch (e) {
-            global.logger?.warn(`InstaDP Method 3 failed: ${e.message}`);
-        }
-
-        // Method 4: Maher API
-        try {
-            const res = await fetch(`https://api.maher-zubair.tech/instagram/stalk?q=${username}`);
-            if (!res.ok) throw new Error("API 4 failed");
-            const json = await res.json();
-            if (json.status !== 200 || !json.result) throw new Error("Failed");
-
-            const data = json.result;
-            await conn.sendMessage(m.chat, {
-                image: { url: data.photo_profile || data.photo_profile_url },
-                caption: `*Instagram Profile*
-
-• *Name*: ${data.name || username}
-• *User*: @${data.username}
-• *Bio*: ${data.biography || "-"}`
-            }, { quoted: m });
-            return;
-        } catch (e) {
-            global.logger?.warn(`InstaDP Method 4 failed: ${e.message}`);
-        }
-
-        // Method 5: Deliriuss API
-        try {
-            const res = await fetch(`https://deliriussapi-oficial.vercel.app/tools/igstalk?q=${username}`);
-            if (!res.ok) throw new Error("API 5 failed");
-            const json = await res.json();
-            if (!json.status || !json.data) throw new Error("Failed");
-
-            const data = json.data;
-            await conn.sendMessage(m.chat, {
-                image: { url: data.profileHD || data.profilePic },
-                caption: `*Instagram Profile*
-
-• *Name*: ${data.fullName || username}
-• *User*: @${data.username}
-• *Bio*: ${data.biography || "-"}`
-            }, { quoted: m });
-            return;
-        } catch (e) {
-            throw new Error("All APIs failed to fetch profile.");
-        }
+        await conn.sendMessage(m.chat, {
+            image: { url: ppUrl },
+            caption: caption
+        }, { quoted: m });
 
     } catch (e) {
         global.logger?.error(e);
-        m.reply(`Failed to fetch profile: ${e.message}`);
+        m.reply(`Error: ${e.message}`);
     } finally {
         await global.loading(m, conn, true);
     }
